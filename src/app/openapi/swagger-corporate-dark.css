@@ -1,0 +1,411 @@
+/**
+ * Tema escuro corporativo para Swagger UI (legibilidade e contraste).
+ * Carregar depois de swagger-ui.css
+ */
+
+.openapi-corporate {
+  --oc-bg-page: #060a10;
+  --oc-bg-elevated: #0c121c;
+  --oc-bg-panel: #111a28;
+  --oc-bg-input: #0a1018;
+  --oc-border: #243044;
+  --oc-border-soft: #1a2638;
+  --oc-text: #e8eef7;
+  --oc-text-muted: #9db0c9;
+  --oc-text-dim: #6b7c95;
+  --oc-accent: #6ea8ff;
+  --oc-accent-hover: #9ac2ff;
+  --oc-code-bg: #070d14;
+  --oc-get: #4a9fd4;
+  --oc-post: #3db88f;
+  --oc-patch: #c4a035;
+  --oc-delete: #e07070;
+  --oc-radius: 10px;
+  --oc-font: ui-sans-serif, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Shell exterior */
+.openapi-corporate-shell {
+  background: var(--oc-bg-page);
+  color: var(--oc-text);
+  font-family: var(--oc-font);
+  font-size: 15px;
+  line-height: 1.55;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.openapi-corporate-header {
+  background: linear-gradient(180deg, #0e1624 0%, #0a1018 100%);
+  border-color: var(--oc-border) !important;
+  color: var(--oc-text);
+}
+
+.openapi-corporate-header h1 {
+  color: #f4f7fc;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.openapi-corporate-header p,
+.openapi-corporate-header strong {
+  color: var(--oc-text-muted);
+}
+
+.openapi-corporate-header code {
+  background: rgba(110, 168, 255, 0.12) !important;
+  color: #c8ddff !important;
+  border: 1px solid rgba(110, 168, 255, 0.25);
+}
+
+/* Barra superior padrão do Swagger (esconder no embed) */
+.openapi-corporate .swagger-ui .topbar {
+  display: none;
+}
+
+/* Swagger UI raiz */
+.openapi-corporate .swagger-ui {
+  font-family: var(--oc-font);
+  color: var(--oc-text);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.openapi-corporate .swagger-ui a {
+  color: var(--oc-accent);
+}
+
+.openapi-corporate .swagger-ui a:hover {
+  color: var(--oc-accent-hover);
+}
+
+/* Info / topo do doc */
+.openapi-corporate .swagger-ui .info {
+  margin: 1.25rem 0 1.5rem;
+}
+
+.openapi-corporate .swagger-ui .info .title {
+  color: #f4f7fc;
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.openapi-corporate .swagger-ui .info .title small {
+  color: var(--oc-text-muted);
+  font-size: 0.95rem;
+}
+
+.openapi-corporate .swagger-ui .info p,
+.openapi-corporate .swagger-ui .info li,
+.openapi-corporate .swagger-ui .info .base-url {
+  color: var(--oc-text-muted) !important;
+  font-size: 0.95rem;
+}
+
+.openapi-corporate .swagger-ui .info h1,
+.openapi-corporate .swagger-ui .info h2,
+.openapi-corporate .swagger-ui .info h3,
+.openapi-corporate .swagger-ui .info h4,
+.openapi-corporate .swagger-ui .info h5 {
+  color: #eef3fb;
+  font-weight: 600;
+}
+
+/* Servidor / scheme */
+.openapi-corporate .swagger-ui .scheme-container {
+  background: var(--oc-bg-elevated);
+  border: 1px solid var(--oc-border);
+  border-radius: var(--oc-radius);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+}
+
+.openapi-corporate .swagger-ui .scheme-container label {
+  color: var(--oc-text-muted);
+}
+
+.openapi-corporate .swagger-ui .servers > label {
+  color: var(--oc-text);
+}
+
+.openapi-corporate .swagger-ui .servers select {
+  background: var(--oc-bg-input);
+  border: 1px solid var(--oc-border);
+  color: var(--oc-text);
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Authorize */
+.openapi-corporate .swagger-ui .btn.authorize {
+  background: #1a3352;
+  border: 1px solid #2d5080;
+  color: #d4e5ff;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.openapi-corporate .swagger-ui .btn.authorize:hover {
+  background: #234066;
+  border-color: #3d6aad;
+  color: #fff;
+}
+
+.openapi-corporate .swagger-ui .btn.authorize svg {
+  fill: #9ac2ff;
+}
+
+/* Tags */
+.openapi-corporate .swagger-ui .opblock-tag {
+  border-bottom: 1px solid var(--oc-border-soft);
+  color: #f0f4fa;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  padding: 0.75rem 0;
+}
+
+.openapi-corporate .swagger-ui .opblock-tag small {
+  color: var(--oc-text-dim);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Blocos de operação */
+.openapi-corporate .swagger-ui .opblock {
+  border: 1px solid var(--oc-border);
+  border-radius: var(--oc-radius);
+  background: var(--oc-bg-panel);
+  margin-bottom: 0.65rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.openapi-corporate .swagger-ui .opblock .opblock-summary {
+  border-color: transparent;
+}
+
+.openapi-corporate .swagger-ui .opblock .opblock-summary-method {
+  font-weight: 700;
+  min-width: 4.5rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.openapi-corporate .swagger-ui .opblock.opblock-get .opblock-summary-method {
+  background: rgba(74, 159, 212, 0.2);
+  color: #9fd4f5;
+}
+
+.openapi-corporate .swagger-ui .opblock.opblock-post .opblock-summary-method {
+  background: rgba(61, 184, 143, 0.2);
+  color: #7ee0c3;
+}
+
+.openapi-corporate .swagger-ui .opblock.opblock-patch .opblock-summary-method {
+  background: rgba(196, 160, 53, 0.2);
+  color: #f0d78a;
+}
+
+.openapi-corporate .swagger-ui .opblock.opblock-delete .opblock-summary-method {
+  background: rgba(224, 112, 112, 0.2);
+  color: #ffb4b4;
+}
+
+.openapi-corporate .swagger-ui .opblock .opblock-summary-path,
+.openapi-corporate .swagger-ui .opblock .opblock-summary-description {
+  color: var(--oc-text);
+  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
+  font-size: 0.9rem;
+}
+
+.openapi-corporate .swagger-ui .opblock .opblock-description-wrapper p,
+.openapi-corporate .swagger-ui .opblock .opblock-description-wrapper {
+  color: var(--oc-text-muted);
+}
+
+.openapi-corporate .swagger-ui .opblock-body {
+  background: var(--oc-bg-elevated);
+  border-top: 1px solid var(--oc-border-soft);
+}
+
+/* Tabelas parâmetros */
+.openapi-corporate .swagger-ui table thead tr th {
+  background: #0d1522;
+  border-bottom: 1px solid var(--oc-border);
+  color: #c5d2e6;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.openapi-corporate .swagger-ui table tbody tr td {
+  border-bottom: 1px solid var(--oc-border-soft);
+  color: var(--oc-text);
+  font-size: 0.95rem;
+}
+
+.openapi-corporate .swagger-ui .parameter__name {
+  color: #b8d4ff;
+  font-weight: 600;
+}
+
+.openapi-corporate .swagger-ui .parameter__type {
+  color: var(--oc-text-dim);
+}
+
+/* Inputs e textarea */
+.openapi-corporate .swagger-ui input[type="text"],
+.openapi-corporate .swagger-ui input[type="password"],
+.openapi-corporate .swagger-ui input[type="search"],
+.openapi-corporate .swagger-ui textarea {
+  background: var(--oc-bg-input) !important;
+  border: 1px solid var(--oc-border) !important;
+  color: var(--oc-text) !important;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.65rem;
+}
+
+.openapi-corporate .swagger-ui textarea {
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  line-height: 1.45;
+}
+
+.openapi-corporate .swagger-ui input:focus,
+.openapi-corporate .swagger-ui textarea:focus {
+  border-color: #4a6fa8 !important;
+  outline: 2px solid rgba(110, 168, 255, 0.25);
+  outline-offset: 0;
+}
+
+/* Botões Try it out / Execute */
+.openapi-corporate .swagger-ui .btn.execute {
+  background: #1e4d3a;
+  border: 1px solid #2d8f6f;
+  color: #d8fff0;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.openapi-corporate .swagger-ui .btn.execute:hover {
+  background: #25664d;
+  border-color: #3db88f;
+  color: #fff;
+}
+
+.openapi-corporate .swagger-ui .btn.cancel {
+  background: #2a2f38;
+  border: 1px solid var(--oc-border);
+  color: var(--oc-text-muted);
+  border-radius: 8px;
+}
+
+.openapi-corporate .swagger-ui .btn.try-out__btn {
+  color: var(--oc-accent);
+  border-color: #3d5a80;
+  background: rgba(110, 168, 255, 0.08);
+  border-radius: 8px;
+}
+
+/* Respostas */
+.openapi-corporate .swagger-ui .responses-inner {
+  background: var(--oc-bg-elevated);
+}
+
+.openapi-corporate .swagger-ui .responses-inner h4,
+.openapi-corporate .swagger-ui .responses-inner h5 {
+  color: #dde6f2;
+}
+
+.openapi-corporate .swagger-ui .response-col_status {
+  color: #9fd4a8;
+  font-weight: 700;
+}
+
+.openapi-corporate .swagger-ui .highlight-code {
+  background: var(--oc-code-bg) !important;
+  border: 1px solid var(--oc-border);
+  border-radius: 8px;
+}
+
+.openapi-corporate .swagger-ui .microlight,
+.openapi-corporate .swagger-ui .highlight-code code {
+  color: #d4e5ff !important;
+  font-size: 0.85rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Models / schemas */
+.openapi-corporate .swagger-ui .model-box {
+  background: var(--oc-bg-elevated);
+  border: 1px solid var(--oc-border);
+  border-radius: 8px;
+}
+
+.openapi-corporate .swagger-ui .model {
+  color: var(--oc-text-muted);
+  font-size: 0.9rem;
+}
+
+.openapi-corporate .swagger-ui .prop-type {
+  color: #8ec5ff;
+}
+
+.openapi-corporate .swagger-ui .property-row {
+  border-color: var(--oc-border-soft);
+}
+
+/* Tabs */
+.openapi-corporate .swagger-ui .tab li button.tablinks {
+  color: var(--oc-text-muted);
+}
+
+.openapi-corporate .swagger-ui .tab li button.tablinks.active {
+  color: var(--oc-text);
+  border-bottom: 2px solid var(--oc-accent);
+}
+
+/* Filter */
+.openapi-corporate .swagger-ui .filter-container input {
+  background: var(--oc-bg-input) !important;
+  border: 1px solid var(--oc-border) !important;
+  color: var(--oc-text) !important;
+}
+
+/* Dialog modal (authorize) */
+.openapi-corporate .swagger-ui .dialog-ux .modal-ux {
+  background: var(--oc-bg-panel);
+  border: 1px solid var(--oc-border);
+  border-radius: var(--oc-radius);
+}
+
+.openapi-corporate .swagger-ui .dialog-ux .modal-ux-header h3 {
+  color: #f0f4fa;
+}
+
+.openapi-corporate .swagger-ui .dialog-ux .modal-ux-content p,
+.openapi-corporate .swagger-ui .dialog-ux .modal-ux-content label {
+  color: var(--oc-text-muted);
+}
+
+.openapi-corporate .swagger-ui .dialog-ux .modal-ux-content input {
+  background: var(--oc-bg-input) !important;
+  color: var(--oc-text) !important;
+}
+
+/* Scroll interno */
+.openapi-corporate .swagger-ui .response-controls {
+  color: var(--oc-text-muted);
+}
+
+/* Erros / loading */
+.openapi-corporate .swagger-ui .errors-wrapper {
+  background: #2a1518;
+  border: 1px solid #5c2a32;
+  color: #f5c2c7;
+  border-radius: 8px;
+}

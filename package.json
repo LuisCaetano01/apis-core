@@ -1,23 +1,33 @@
 {
-  "name": "apis_core",
+  "name": "apis-core",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node -e \"console.log('Sem testes automatizados definidos.'); process.exit(0)\"",
+    "db:migrate": "node scripts/auth-users-migrate.mjs",
+    "db:create-user": "node scripts/auth-create-user.mjs",
+    "db:seed-demo-user": "node scripts/auth-create-user.mjs teste@teste.pt teste",
+    "db:migrate-demo": "node scripts/demo-items-migrate.mjs"
   },
   "dependencies": {
-    "next": "16.2.2",
+    "bcryptjs": "^3.0.3",
+    "jose": "^6.2.2",
+    "mysql2": "^3.20.0",
+    "next": "16.2.1",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "swagger-ui-react": "^5.32.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "babel-plugin-react-compiler": "1.0.0",
+    "dotenv": "^17.3.1",
     "eslint": "^9",
-    "eslint-config-next": "16.2.2",
+    "eslint-config-next": "16.2.1",
     "tailwindcss": "^4"
   }
 }
